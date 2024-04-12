@@ -1,0 +1,64 @@
+<div
+  class={`-top-1/2 -left-1/2 -bottom-1/2 -right-1/2
+  fixed bg-repeat bg-transparent w-[200%] h-[200vh] z-[99999] 
+  pointer-events-none contrast-125 brightness-125
+  `}
+>
+</div>
+
+<style>
+  div {
+    background-image: url("./noise.webp");
+    opacity: 0.045;
+    animation: noise 0.3s infinite;
+    mix-blend-mode: multiply;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    div {
+      animation: none;
+    }
+  }
+
+  @keyframes noise {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    20% {
+      transform: translate(-5%, -5%);
+    }
+
+    30% {
+      transform: translate(-5%, -10%);
+    }
+
+    40% {
+      transform: translate(-10%, -5%);
+    }
+
+    50% {
+      transform: translate(-15%, -5%);
+    }
+
+    60% {
+      transform: translate(-5%, -15%);
+    }
+
+    70% {
+      transform: translate(-15%, -10%);
+    }
+
+    80% {
+      transform: translate(-10%, -15%);
+    }
+
+    90% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(-5%, -5%);
+    }
+  }
+</style>
