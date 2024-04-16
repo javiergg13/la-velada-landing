@@ -1,0 +1,33 @@
+<div id='smoke-bg' class='fixed top-0 h-full w-full'>
+
+</div>
+
+<script>
+  import * as THREE from 'three'
+
+  const $bkg = document.getElementById('smoke-bg')
+
+  const w = window.innerWidth
+  const h = window.innerHeight
+
+  // inicializar Three.js
+  // 3 cosas básicas: escena, cámara y renderzador
+
+  // escena 🖼️
+  const scene = new THREE.Scene()
+
+  // cámara 📸
+  const camera = new THREE.PerspectiveCamera(75, w / h, 1, 1000)
+  camera.position.z = 10
+  scene.add(camera)
+
+  // renderizador ▶️
+  const renderer = new THREE.WebGLRender()
+  renderer.setSize(w, h)
+
+  // color de fondo
+  renderer.setClearColor(0x000000, 1)
+
+  $bkg?.appendChild(renderer.domElement)
+
+</script>
